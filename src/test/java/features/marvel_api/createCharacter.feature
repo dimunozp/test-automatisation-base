@@ -8,7 +8,6 @@ Feature: Create Character from Marvel API
 
     Given url baseUrl
       And request requestBody
-    * print requestBody
   @id:1 @createCharacterHappyPath
   Scenario: T-API-HU-123-CA1-Create a new character
     When method POST

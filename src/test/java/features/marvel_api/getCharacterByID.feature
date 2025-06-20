@@ -17,12 +17,6 @@ Feature: Get Character from Marvel API by ID
 
   @id:2 @getCharacterWithWrongId
   Scenario: T-API-HU-123-CA2-Get character by ID but ID does not exist
-    * def newRequest = { name: 'Hulk', alterego: 'Dr. Robert Bruce Banner', description: 'Hulk', powers: ['Hiper Jump', 'Regeneration'] }
-    * def temp = {}
-    * karate.set('temp', 'requestBody', newRequest)
-    * def result = call read('./createCharacter.feature@createCharacterHappyPath') temp
-    * def characterId = result.characterId
-    * def characterResponse = result.characterResponse
     Given url baseUrl+'/999'
     When method GET
     Then status 404
